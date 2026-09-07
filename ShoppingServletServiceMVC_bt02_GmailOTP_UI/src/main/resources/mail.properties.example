@@ -1,0 +1,11 @@
+# Gmail SMTP - dùng App Password, KHÔNG dùng mật khẩu Gmail bình thường.
+# Bước 1: bật Xác minh 2 bước cho Gmail.
+# Bước 2: tạo App Password tại Google Account > Security > App passwords.
+# Bước 3: điền Gmail và 16 ký tự App Password bên dưới.
+# Trước khi push GitHub, nên thay lại bằng placeholder hoặc dùng biến môi trường.
+
+mail.username=khoinguyenvlm123@gmail.com
+mail.password=hjiu bfqm abic lyyy
+mail.fromName=wed
+mail.host=smtp.gmail.com
+mail.port=587

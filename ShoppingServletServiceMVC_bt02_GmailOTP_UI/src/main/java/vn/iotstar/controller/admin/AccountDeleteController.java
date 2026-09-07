@@ -1,0 +1,3 @@
+package vn.iotstar.controller.admin;
+import jakarta.servlet.annotation.WebServlet;import jakarta.servlet.http.*;import vn.iotstar.entity.User;import vn.iotstar.service.*;import vn.iotstar.service.impl.*;import vn.iotstar.util.Constant;import java.io.IOException;
+@WebServlet("/admin/account/delete") public class AccountDeleteController extends HttpServlet{private final UserService s=new UserServiceImpl();protected void doGet(HttpServletRequest r,HttpServletResponse p)throws IOException{if(!AdminAuth.requireAdmin(r,p))return;int id=Integer.parseInt(r.getParameter("id"));User me=(User)r.getSession().getAttribute(Constant.SESSION_ACCOUNT);if(me==null||me.getId()!=id)s.delete(id);p.sendRedirect(r.getContextPath()+"/admin/account/list");}}

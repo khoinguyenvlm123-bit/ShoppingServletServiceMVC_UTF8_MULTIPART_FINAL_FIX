@@ -1,0 +1,12 @@
+<sitemesh>
+    <!-- Theo bài giảng: decorator mặc định nằm trong /WEB-INF/decorators/. -->
+    <mapping path="/profile" decorator="user.jsp"/>
+    <mapping path="/product" decorator="user.jsp"/>
+    <mapping path="/product/*" decorator="user.jsp"/>
+    <mapping path="/rating/*" decorator="user.jsp"/>
+    <mapping path="/order/*" decorator="user.jsp"/>
+
+    <!-- Tài nguyên/ảnh tải lên không được decorate. -->
+    <mapping path="/assets/*" exclude="true"/>
+    <mapping path="/image*" exclude="true"/>
+</sitemesh>
